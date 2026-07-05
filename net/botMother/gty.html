@@ -1,0 +1,104 @@
+<!-- Ajouter.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dépôt d'un avis</title>
+
+    <script src="gg.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset{
+            width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        table{
+            width: 100%;
+        }
+
+        td{
+            padding: 8px;
+        }
+
+        input, select, textarea{
+            width: 100%;
+        }
+
+        textarea{
+            height: 120px;
+        }
+
+        .buttons{
+            text-align: right;
+        }
+
+        .buttons input{
+            width: 100px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<form onsubmit="return verifier();">
+
+    <fieldset>
+        <legend><b>Dépôt d'un avis</b></legend>
+
+        <table>
+            <tr>
+                <td>Pseudo :</td>
+                <td>
+                    <input type="text" id="pseudo">
+                </td>
+
+                <td>Note :</td>
+                <td>
+                    <input type="text" id="note">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Logiciel :</td>
+                <td>
+                    <select id="logiciel">
+                        <option value="">Choisir un logiciel</option>
+                        <option>Delta Dev</option>
+                        <option>Viral</option>
+                        <option>Extra Write</option>
+                        <option>Notepad++</option>
+                    </select>
+                </td>
+
+                <td>Commentaire :</td>
+                <td rowspan="2">
+                    <textarea id="commentaire"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" class="buttons">
+                    <input type="reset" value="Annuler">
+                    <input type="submit" value="Envoyer">
+                </td>
+            </tr>
+
+        </table>
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>
